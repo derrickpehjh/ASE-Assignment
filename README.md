@@ -2,7 +2,7 @@
 
 ## Instructions
 
-###To run using Eclipse
+### To run using Eclipse
 
 1) Import the sql dump file(db_strut_users.sql) to MySQL  
 2) Import Project from WAR file(Main.war)  
