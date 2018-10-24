@@ -7,7 +7,6 @@ import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.util.ValueStack;
 import com.project.model.User;
-import com.project.service.UserService;
 
 public class LogonAction extends ActionSupport {
 
@@ -23,13 +22,18 @@ public class LogonAction extends ActionSupport {
 	public void setUserBean(User user) {
 		userBean = user;
 	}
+	
+	public User setUser() {
+		User user = new User();
+		user= userBean;
+		return user;
+	}
+	
 
 	@Override
 	public String execute() throws Exception {
 		ValueStack stack = ActionContext.getContext().getValueStack();
-		String[] params = new String[] { userBean.getUserName(), userBean.getPassword() };
-		UserService serv = new UserService();
-		boolean isSuccess = serv.loginService(params);
+		boolean isSuccess = this.setUser().getCred();
 		if (isSuccess)
 			return LOGIN_SUCCESS;
 		else {
