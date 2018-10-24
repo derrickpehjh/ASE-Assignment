@@ -14,9 +14,9 @@
 	<div class="container">
 		<s:form method="POST" action="logon" theme="bootstrap"
 			cssClass="well form-vertical login_form">
-			<s:textfield name="userBean.userName" label="User Name"
+			<s:textfield name="userName" label="User Name"
 				placeholder="Login" />
-			<s:password name="userBean.password" label="Password"
+			<s:password name="password" label="Password"
 				placeholder="Password" />
 			<s:submit name="submit" id="submitd" label="Submit"
 				cssClass="btn btn-primary" />
