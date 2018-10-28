@@ -1,0 +1,8 @@
+# GIT
+.git/
+
+# Eclipse
+.settings/
+.buildpath
+.classpath
+.project
