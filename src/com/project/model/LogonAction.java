@@ -8,6 +8,11 @@ import com.opensymphony.xwork2.ActionSupport;
 import com.opensymphony.xwork2.util.ValueStack;
 import com.project.repository.UserRepository;
 
+
+/*
+ * Model Action Class which communicates with the business layer
+ * 
+ */
 public class LogonAction extends ActionSupport {
 
 	private static final long serialVersionUID = 1L;
@@ -33,7 +38,12 @@ public class LogonAction extends ActionSupport {
         this.password = password;
     }
 	
-
+    /*
+     * (non-Javadoc)
+     * @see com.opensymphony.xwork2.ActionSupport#execute()
+     * Overrides default execute method to retrieve username and password 
+     * and sends to the database. Database retrieves the query and returns boolean
+     */
 	@Override
 	public String execute() throws Exception {
 		ValueStack stack = ActionContext.getContext().getValueStack();
@@ -50,6 +60,12 @@ public class LogonAction extends ActionSupport {
 		}
 	}
 	
+	/*
+	 * (non-Javadoc)
+	 * @see com.opensymphony.xwork2.ActionSupport#validate()
+	 * Overrides validate method to do client side validation fo username and
+	 * password fields
+	 */
     @Override
     public void validate() {
          if (userName == null || userName.trim().equals(""))

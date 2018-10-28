@@ -7,6 +7,10 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Properties;
 
+/*
+ * A utility class to handle and bridge database connections
+ */
+
 public class DBCon {
 
 

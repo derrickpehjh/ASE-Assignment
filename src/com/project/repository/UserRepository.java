@@ -6,6 +6,10 @@ import java.sql.ResultSet;
 
 import com.project.utils.DBCon;
 
+/*
+ * Database class which contains the relevant sql queries
+ */
+
 public class UserRepository {
 
 	private Connection dbConnection;
@@ -22,6 +26,9 @@ public class UserRepository {
 
 	private static final String LOGIN_QUERY = "select * from users where user_name=? and password=?";
 	
+	/*
+	 * checks if username and password exists in database
+	 */
 	public boolean containsResult(String[] params) throws Exception {
 		boolean contains = false;
 		Connection conn = null;
