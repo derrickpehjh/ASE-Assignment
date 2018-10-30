@@ -12,7 +12,7 @@
 
 	<h2>
 		Welcome
-		<s:property value="userName" />
+		<s:property value="userBean.userName" />
 	</h2>
 
 	<div class="container">
